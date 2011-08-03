@@ -1,0 +1,1 @@
+alias ehrlich="erl -noshell -s erl_tidy dir -s init stop"
