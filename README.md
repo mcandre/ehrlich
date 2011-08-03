@@ -6,7 +6,7 @@ http://www.yellosoft.us/ehrlich
 
 ABOUT
 
-Ehrlich is a small command line wrapper around the erl\_tidy library. Ehrlich scans directories (nonrecursively), reading .erl files and generating more idiomatic code.
+Ehrlich is a small command line wrapper around the [erl\_tidy](http://www.erlang.org/doc/man/erl_tidy.html) library. Ehrlich scans directories (nonrecursively), reading .erl files and generating more idiomatic code.
 
 WARNING
 
