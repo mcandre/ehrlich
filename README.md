@@ -22,7 +22,7 @@ Copy the *contents* of `ehrlich.sh` to your shell configuration file: `~/.profil
 
 Windows
 
-Copy `ehrlich.bat` to a directory in your `PATH`, e.g. `C:\\Windows\\System32`.
+Copy `ehrlich.bat` to a directory in your `PATH`, e.g. `C:\Windows\System32`.
 
 EXAMPLE
 
