@@ -8,7 +8,7 @@
 
 resurrect([]) -> ok;
 resurrect([File|Files]) ->
-	erl_tidy:dir(File, [{test, true}, {verbose, true}]),
+	erl_tidy:dir(File, [{verbose, true}, {regexp, ".*\\.(erl|escript)$"}]),
 	resurrect(Files).
 
 usage() -> io:format("Usage: ~s [dir...]~n", [?FILE]).
