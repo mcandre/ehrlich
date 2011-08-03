@@ -1,14 +1,12 @@
-#!/usr/bin/env escript
-
--module(hello).
+-module(ehrlich).
 -author("andrew.pennebaker@gmail.com").
 -mode(compile).
 -export([main/1, resurrect/1]).
--import(erl_tidy).
+-import(erl_tidy, [dir/2]).
 
 resurrect([]) -> ok;
 resurrect([File|Files]) ->
-	erl_tidy:dir(File, [{verbose, true}, {regexp, ".*\\.(erl|escript)$"}]),
+	dir(File, [{verbose, true}, {regexp, ".*\\.(erl|escript)$"}, {recursive, false}]),
 	resurrect(Files).
 
 usage() -> io:format("Usage: ~s [dir...]~n", [?FILE]).
