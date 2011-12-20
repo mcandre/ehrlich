@@ -1,30 +1,30 @@
-ehrlich - Reviving dead code
+# ehrlich - Reviving dead code
 
-HOMEPAGE
+## HOMEPAGE
 
-http://www.yellosoft.us/ehrlich
+[http://www.yellosoft.us/ehrlich](http://www.yellosoft.us/ehrlich)
 
-ABOUT
+## ABOUT
 
 Ehrlich is a small command line wrapper around the [erl\_tidy](http://www.erlang.org/doc/man/erl_tidy.html) library. Ehrlich scans directories, reading .erl files and generating more idiomatic code.
 
-WARNINGS
+## WARNINGS
 
 Ehrlich will save the new code over the old code! Backup files are created just in case.
 
 Ehrlich will do this recursively over every subdirectory of the current one.
 
-INSTALLATION
+## INSTALLATION
 
-Mac OS X, Linux, Unix
+### Mac OS X, Linux, Unix
 
 Copy the *contents* of `ehrlich.sh` to your shell configuration file: `~/.profile`, `~/.bashrc`, etc.
 
-Windows
+### Windows
 
 Copy `ehrlich.bat` to a directory in your `PATH`, e.g. `C:\Windows\System32`.
 
-EXAMPLE
+## EXAMPLE
 
 	$ ehrlich 
 	reading module `./example.erl'.
