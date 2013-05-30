@@ -1,0 +1,2 @@
+#!/bin/sh
+erl -noshell -s erl_tidy dir $1 -s init stop

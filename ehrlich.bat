@@ -1,1 +1,1 @@
-erl -noshell -s erl_tidy dir -s init stop
+erl -noshell -s erl_tidy dir %1 -s init stop
