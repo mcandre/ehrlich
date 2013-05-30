@@ -1,1 +1,1 @@
-erl -noshell -s erl_tidy dir %1 -s init stop
+erl -noshell -eval "erl_tidy:dir(\"%1\", [{test, true}])." -s init stop
