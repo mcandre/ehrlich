@@ -2,7 +2,7 @@
 
 # HOMEPAGE
 
-[http://www.yellosoft.us/ehrlich](http://www.yellosoft.us/ehrlich)
+http://www.yellosoft.us/ehrlich
 
 # ABOUT
 
@@ -15,7 +15,7 @@ Add the ehrlich directory to `PATH`.
 # EXAMPLE
 
     $ cd src/
-    $ ehrlich ehrlich/
+    $ ./bin/ehrlich ehrlich/
     reading module `./ehrlich/example.erl'.
     ./ehrlich/example.erl:7: expanding call to imported function `lists:map/2'.
     ./ehrlich/example.erl:7: replacing call to `lists:map/2' with a list comprehension.

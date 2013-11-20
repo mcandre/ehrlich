@@ -1,7 +1,7 @@
-checkbashisms:
-	-checkbashisms ehrlich
+shlint:
+	-shlint bin/
 
 shellcheck:
-	-shellcheck ehrlich
+	-shellcheck bin/**
 
-lint: checkbashisms shellcheck
+lint: shlint shellcheck
