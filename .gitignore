@@ -1,2 +1,4 @@
 *.beam
 Gemfile.lock
+.DS_Store
+Thumbs.db
