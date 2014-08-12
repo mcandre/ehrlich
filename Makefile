@@ -1,7 +1,12 @@
+all: lint
+
 shlint:
 	-shlint bin/
 
 shellcheck:
-	-shellcheck bin/**
+	-shellcheck bin/*
 
-lint: shlint shellcheck
+checkbashisms:
+	-checkbashisms -n -p bin/*
+
+lint: shlint checkbashisms shellcheck
