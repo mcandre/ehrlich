@@ -1,12 +1,12 @@
 all: lint
 
 shlint:
-	-shlint bin/
+	-find bin -type f -o -name "*.bat" -prune -exec shlint {} \; | grep -v "^$$"; true
 
 shellcheck:
-	-shellcheck bin/*
+	-find bin -type f -o -name "*.bat" -prune -exec shellcheck {} \;
 
 checkbashisms:
-	-checkbashisms -n -p bin/*
+	-find bin -type f -o -name "*.bat" -prune -exec checkbashisms -n -p {} \; | grep -v "^$$"; true
 
 lint: shlint checkbashisms shellcheck
