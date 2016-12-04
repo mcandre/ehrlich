@@ -1,12 +1,12 @@
 all: lint
 
 shlint:
-	-find bin -type f -o -name "*.bat" -prune -exec shlint {} \; | grep -v "^$$"; true
-
-shellcheck:
-	-find bin -type f -o -name "*.bat" -prune -exec shellcheck {} \;
+	find . \( -wholename '*/node_modules*' -o -name '*.bat' \) -prune -o -type f \( -wholename '*/bin/*' -o -name '*.sh' -o -name '*.bashrc*' -o -name '.*profile*' -o -name '*.envrc*' \) -print | xargs shlint
 
 checkbashisms:
-	-find bin -type f -o -name "*.bat" -prune -exec checkbashisms -n -p {} \; | grep -v "^$$"; true
+	find . \( -wholename '*/node_modules*' -o -name '*.bat' \) -prune -o -type f \( -wholename '*/bin/*' -o -name '*.sh' -o -name '*.bashrc*' -o -name '.*profile*' -o -name '*.envrc*' \) -print | xargs checkbashisms -n -p
+
+shellcheck:
+	find . \( -wholename '*/node_modules*' -o -name '*.bat' \) -prune -o -type f \( -wholename '*/bin/*' -o -name '*.sh' -o -name '*.bashrc*' -o -name '.*profile*' -o -name '*.envrc*' \) -print | xargs shellcheck
 
 lint: shlint checkbashisms shellcheck
