@@ -1,2 +1,4 @@
 #!/bin/sh
+set -euo pipefail
+
 erl -noshell -eval "erl_tidy:dir(\"$1\", [{test, true}])." -s init stop
