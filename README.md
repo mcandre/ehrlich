@@ -24,3 +24,11 @@ reading module `./ehrlich/example.erl'.
 ./ehrlich/example.erl:3: removing unused imports:
     `lists:map/2'
 ````
+
+# REQUIREMENTS
+
+* [Erlang](http://www.erlang.org)
+
+## Optional
+
+* [stank](https://github.com/mcandre/stank) (e.g., `go get github.com/mcandre/stank/...`)
