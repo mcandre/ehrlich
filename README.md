@@ -14,7 +14,7 @@ Add the ehrlich directory to `PATH`.
 
 # EXAMPLE
 
-```
+```console
 $ cd src/
 $ ./bin/ehrlich ehrlich/
 reading module `./ehrlich/example.erl'.
@@ -27,8 +27,12 @@ reading module `./ehrlich/example.erl'.
 
 # REQUIREMENTS
 
-* [Erlang](http://www.erlang.org)
+* [Erlang OTP](http://www.erlang.org) 21+
 
 ## Optional
 
-* [stank](https://github.com/mcandre/stank) (e.g., `go get github.com/mcandre/stank/...`)
+* [Python](https://www.python.org/) 3+
+* [GHC Haskell](https://www.haskell.org/) 8+
+* [Go](https://golang.org/) 1.9+
+* [GNU make](https://www.gnu.org/software/make/)
+* [checkbashisms](https://sourceforge.net/projects/checkbaskisms/)

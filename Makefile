@@ -1,10 +1,10 @@
 all: lint
 
+safety:
+	safety check
+
 bashate:
 	@stank . | xargs bashate
-
-shlint:
-	@stank . | xargs shlint
 
 checkbashisms:
 	@stank . | xargs checkbashisms -n -p
@@ -15,4 +15,4 @@ shellcheck:
 funk:
 	@funk .
 
-lint: bashate shlint checkbashisms shellcheck funk
+lint: safety bashate checkbashisms shellcheck funk
