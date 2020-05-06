@@ -1,4 +1,10 @@
 #!/bin/sh
 set -euo pipefail
+IFS=$'\n\t '
 
-erl -noshell -eval "erl_tidy:dir(\"$1\", [{test, true}])." -s init stop
+erl \
+    -noshell \
+    -eval "erl_tidy:dir(\"$1\", [{test, true}])." \
+    -s \
+    init \
+    stop
