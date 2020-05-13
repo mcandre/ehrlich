@@ -1,8 +1,7 @@
 #!/bin/sh
-set -euo pipefail
-IFS=$'\n\t '
-
-erl \
+unset IFS
+set -euf
+exec erl \
     -noshell \
     -eval "erl_tidy:dir(\"$1\", [{test, true}])." \
     -s \
