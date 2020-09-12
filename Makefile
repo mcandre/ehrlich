@@ -10,7 +10,7 @@ checkbashisms:
 	@stank . | xargs checkbashisms -n -p
 
 shellcheck:
-	@stank . | xargs shellcheck
+	@stank -exInterp zsh . | grep -v node_modules | xargs shellcheck
 
 funk:
 	@funk .
